@@ -1,0 +1,357 @@
+<html>
+ <head> 
+    <script>
+
+var millisec = 0; 
+var seconds = 0;
+ var timer; 
+var show;
+var h;
+
+function display(){ 
+         if (millisec>=999){ 
+              millisec=0 
+              seconds+=1
+              } 
+         else 
+             millisec+=1 
+             document.d.d2.value = seconds + "." + millisec; 
+             show = seconds + "." + millisec; 
+
+       document.getElementById("dis"). innerHTML= seconds + "." + millisec; 
+             timer = setTimeout("display()",100); 
+ } 
+
+ 
+
+function stoptimer() { 
+         clearTimeout(timer); 
+              timer = 0;
+ } 
+
+function startstoptimer() {  
+          if (timer > 0) { 
+          
+           } 
+           else { 
+               display();
+           } 
+} 
+
+function resettimer() { 	
+            stoptimer(); 	
+             millisec = 0;	
+             seconds = 0; 
+} 
+function score() {
+if (i==60) 
+{best() ;
+alert("yourscore is "+show) 
+resettimer();}
+}
+var i=20;
+function a() {
+        if(i<=20) {document.getElementById("1").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("1").innerHTML = "    😋";
+i+=1;}
+}
+function b() {
+        if(i<=21){ document.getElementById("2").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("2").innerHTML = "😋";
+i+=1;}
+}
+function c() {
+        if(i<=22) {document.getElementById("3").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("3").innerHTML = "😋";
+i+=1;}
+}
+ function x() {
+        if(i<=23){document.getElementById("4").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("4").innerHTML = "😋";
+i+=1;}
+}
+function e() {
+        if(i<=24) {document.getElementById("5").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("5").innerHTML = "😋";
+i+=1;}
+}
+function f() {
+        if(i<=25){ document.getElementById("6").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("6").innerHTML = "😋";
+i+=1;}
+}
+function g() {
+        if(i<=26) {document.getElementById("7").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("7").innerHTML = "😋";
+i+=1;}
+}
+function h() {
+        if(i<=27){ document.getElementById("8").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("8").innerHTML = "😋";
+i+=1;}
+}
+function y() {
+        if(i<=28) {document.getElementById("9").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("9").innerHTML = "😋";
+i+=1;} 
+}
+function j() {
+        if(i<=29){ document.getElementById("10").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("10").innerHTML = "😋";
+i+=1;}
+}
+function k() {
+        if(i<=30) { document.getElementById("11").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("11").innerHTML = "😋";
+i+=1;}
+}
+function l() {
+        if(i<=31){ document.getElementById("12").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("12").innerHTML = "😋";
+i+=1;}
+}
+function m() {
+        if(i<=32) {document.getElementById("13").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("13").innerHTML = "😋";
+i+=1;}
+}
+function n() {
+        if(i<=33){ document.getElementById("14").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("14").innerHTML = "😋";
+i+=1;}
+}
+function o() {
+        if(i<=34) {document.getElementById("15").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("15").innerHTML = "😋";
+i+=1;}
+}
+function p() {
+        if(i<=35){ document.getElementById("16").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("16").innerHTML = "😋";
+i+=1;}
+}
+function q() {
+        if(i<=36) {document.getElementById("17").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("17").innerHTML = "😋";
+i+=1;}
+}
+function r() {
+        if(i<=37){ document.getElementById("18").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("18").innerHTML = "😋";
+i+=1;}
+}
+function s() {
+        if(i<=38) {document.getElementById("19").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("19").innerHTML = "😋";
+i+=1;}
+}
+function t() {
+        if(i<=39){ document.getElementById("20").innerHTML = i+1;
+i+=1;}
+        else{
+document.getElementById("20").innerHTML = "😋";
+i+=1;}
+}
+function again() {
+  i=0;
+a(); b(); c(); x(); e(); f(); g(); h(); y(); j(); k(); l(); m(); n(); o(); p(); q(); r(); s(); t();
+}
+var bestscored=[600,700,800,900,1000];
+function best (){
+         if( millisec< bestscored[0]) {
+           bestscored[4]= bestscored[3];
+           bestscored[3]= bestscored[2]; 
+           bestscored[2]= bestscored[1]; 
+           bestscored[1]= bestscored[0];
+           bestscored[0]=millisec;  
+           } else  if( millisec < bestscored[1]) {
+           bestscored[4]= bestscored[3];
+           bestscored[3]= bestscored[2]; 
+           bestscored[2]= bestscored[1]; 
+           bestscored[1]= millisec;
+           } else  if( millisec < bestscored[2]) {
+           bestscored[4]= bestscored[3];
+           bestscored[3]= bestscored[2]; 
+           bestscored[2]=  millisec;        
+           } else  if( millisec < bestscored[3]) {
+           bestscored[4]= bestscored[3];
+           bestscored[3]=  millisec;
+           } else  if( millisec < bestscored[4]) {
+           bestscored[4]= millisec;}
+          else{
+                  }    
+}
+function showbestscore() { 
+{document.getElementById("top").innerHTML = bestscored;}
+}
+</script>
+    <style>
+ body{
+            background-color:lime;
+}
+#container{
+            background-color:white;
+            height:60%;
+            width:65%;
+           margin:400px 300px 300px 160px;
+           border:4px solid ;
+           border-radius:30px;
+          box-shadow:5px 5px 5px black; 
+            
+}
+td{
+           background-color:crimson ;
+           text-align:center;
+           font-size:50px;
+           color:blue;
+           border-radius:10px;
+           opacity:1;
+}
+td:hover{
+          opacity:0.7;
+          box-shadow:3px 3px 2px  2px white;
+  
+}
+
+
+#header{
+         background-color:white;
+         height:40%;
+         width:100%;
+         text-align:center;
+}
+form input[type="button"]{
+    font-weight:bold;
+    color:#fff;
+    background-color:green;
+    box-shadow:inset 2px 2px 3px  ligtgreen ,
+             inset -2px -2px 3px  green; 
+}
+form input[type="button"]:hover{
+  background-color:#d45700;
+}
+form input[type="reset"]{
+    font-weight:bold;
+    color:#fff;
+    background-color:blue;
+    box-shadow:inset 2px 2px 3px ligtblue,
+             inset -2px -2px 3px darkblue; 
+}
+form input[type="reset"]:hover{
+  background-color:#d45700;
+}
+
+
+
+#quad{
+            width:95%;
+             height:55%;
+             margin:10px;
+             padding :5px;
+             box-shadow:inset 2px 2px 3px  darkred,
+             inset -2px -2px 3px darkred; 
+
+             border-radius:16px;
+            
+}
+#tab2{
+            box-radius:10px;
+}
+a:hover{
+            opacity:0.3;
+}
+     
+    </style>
+</head>
+<body>
+  <div id="container">
+      <div id="header">
+         <h1>Number Tapping Speed</h1>
+         <h2>Last Time</h2>
+          <p  id="dis" > milliseconds</p>
+          <form name="d">
+              <h3>Timer<h3>
+             <input type="text" size="4" name="d2"> <br><br>
+             <input type="button" value="start" onclick="startstoptimer()"><br><br>
+              <input type="reset" onclick="again(),resettimer()"  value="play again"><br>
+          </form> 
+          <h3> best 5scores<h3>
+          <p  id="top"  onclick="showbestscore();">show</p>
+
+     
+      </div> 
+     <div id="quad">
+          <table  height=100% width=100%  Id="tab2">
+          <tr>
+                <td Id="1" onclick="a(),startstoptimer()">1</td>
+                <td Id="16"onclick="p();">16</td>
+                <td Id="10"onclick="j();">10</td>
+                <td Id="5"onclick="e();">5</td>
+         </tr>
+          <tr>
+                <td Id="17" onclick="q()">17</td>
+                <td Id="4" onclick="x()">4</td>
+                <td Id="11"onclick="k();">11</td>
+                <td Id="15"onclick="o();">15</td>
+         </tr>
+          <tr>
+                <td Id="8"onclick="h();">8</td>
+                <td Id="14"onclick="n();">14</td>
+                <td Id="18"onclick="r();">18</td>
+                <td Id="3"onclick="c();">3</td>
+         </tr>
+          <tr>
+                <td Id="19"onclick="s();">19</td>
+                <td Id="6"onclick="f();"> 6</td>
+                <td Id="9"onclick=" y();"> 9</td>
+                <td Id="13"onclick="m();">13</td>
+         </tr>
+         <tr>    
+                <td Id="7"onclick="g();">7</td>
+                <td Id="2" onclick="b();">2</td>
+               <td Id="12"onclick="l();">12</td>
+                <td Id="20"onclick="t(),startstoptimer(), score()" >20</td>
+         </tr>
+        </table>
+     </div>
+  </div>
+</body>
+</html>
