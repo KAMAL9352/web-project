@@ -1,262 +1,47 @@
-<html>
- <head> 
-    <script>
-
-var millisec = 0; 
-var seconds = 0;
- var timer; 
-var show;
-var h;
-
-function display(){ 
-         if (millisec>=999){ 
-              millisec=0 
-              seconds+=1
-              } 
-         else 
-             millisec+=1 
-             document.d.d2.value = seconds + "." + millisec; 
-             show = seconds + "." + millisec; 
-
-       document.getElementById("dis"). innerHTML= seconds + "." + millisec; 
-             timer = setTimeout("display()",100); 
- } 
-
- 
-
-function stoptimer() { 
-         clearTimeout(timer); 
-              timer = 0;
- } 
-
-function startstoptimer() {  
-          if (timer > 0) { 
-          
-           } 
-           else { 
-               display();
-           } 
-} 
-
-function resettimer() { 	
-            stoptimer(); 	
-             millisec = 0;	
-             seconds = 0; 
-} 
-function score() {
-if (i==60) 
-{best() ;
-alert("yourscore is "+show) 
-resettimer();}
-}
-var i=20;
-function a() {
-        if(i<=20) {document.getElementById("1").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("1").innerHTML = "    😋";
-i+=1;}
-}
-function b() {
-        if(i<=21){ document.getElementById("2").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("2").innerHTML = "😋";
-i+=1;}
-}
-function c() {
-        if(i<=22) {document.getElementById("3").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("3").innerHTML = "😋";
-i+=1;}
-}
- function x() {
-        if(i<=23){document.getElementById("4").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("4").innerHTML = "😋";
-i+=1;}
-}
-function e() {
-        if(i<=24) {document.getElementById("5").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("5").innerHTML = "😋";
-i+=1;}
-}
-function f() {
-        if(i<=25){ document.getElementById("6").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("6").innerHTML = "😋";
-i+=1;}
-}
-function g() {
-        if(i<=26) {document.getElementById("7").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("7").innerHTML = "😋";
-i+=1;}
-}
-function h() {
-        if(i<=27){ document.getElementById("8").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("8").innerHTML = "😋";
-i+=1;}
-}
-function y() {
-        if(i<=28) {document.getElementById("9").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("9").innerHTML = "😋";
-i+=1;} 
-}
-function j() {
-        if(i<=29){ document.getElementById("10").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("10").innerHTML = "😋";
-i+=1;}
-}
-function k() {
-        if(i<=30) { document.getElementById("11").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("11").innerHTML = "😋";
-i+=1;}
-}
-function l() {
-        if(i<=31){ document.getElementById("12").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("12").innerHTML = "😋";
-i+=1;}
-}
-function m() {
-        if(i<=32) {document.getElementById("13").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("13").innerHTML = "😋";
-i+=1;}
-}
-function n() {
-        if(i<=33){ document.getElementById("14").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("14").innerHTML = "😋";
-i+=1;}
-}
-function o() {
-        if(i<=34) {document.getElementById("15").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("15").innerHTML = "😋";
-i+=1;}
-}
-function p() {
-        if(i<=35){ document.getElementById("16").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("16").innerHTML = "😋";
-i+=1;}
-}
-function q() {
-        if(i<=36) {document.getElementById("17").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("17").innerHTML = "😋";
-i+=1;}
-}
-function r() {
-        if(i<=37){ document.getElementById("18").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("18").innerHTML = "😋";
-i+=1;}
-}
-function s() {
-        if(i<=38) {document.getElementById("19").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("19").innerHTML = "😋";
-i+=1;}
-}
-function t() {
-        if(i<=39){ document.getElementById("20").innerHTML = i+1;
-i+=1;}
-        else{
-document.getElementById("20").innerHTML = "😋";
-i+=1;}
-}
-function again() {
-  i=0;
-a(); b(); c(); x(); e(); f(); g(); h(); y(); j(); k(); l(); m(); n(); o(); p(); q(); r(); s(); t();
-}
-var bestscored=[600,700,800,900,1000];
-function best (){
-         if( millisec< bestscored[0]) {
-           bestscored[4]= bestscored[3];
-           bestscored[3]= bestscored[2]; 
-           bestscored[2]= bestscored[1]; 
-           bestscored[1]= bestscored[0];
-           bestscored[0]=millisec;  
-           } else  if( millisec < bestscored[1]) {
-           bestscored[4]= bestscored[3];
-           bestscored[3]= bestscored[2]; 
-           bestscored[2]= bestscored[1]; 
-           bestscored[1]= millisec;
-           } else  if( millisec < bestscored[2]) {
-           bestscored[4]= bestscored[3];
-           bestscored[3]= bestscored[2]; 
-           bestscored[2]=  millisec;        
-           } else  if( millisec < bestscored[3]) {
-           bestscored[4]= bestscored[3];
-           bestscored[3]=  millisec;
-           } else  if( millisec < bestscored[4]) {
-           bestscored[4]= millisec;}
-          else{
-                  }    
-}
-function showbestscore() { 
-{document.getElementById("top").innerHTML = bestscored;}
-}
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Numeber Tapping Game</title>
     <style>
- body{
+.ract {
+            height: 80px;
+            width:110px;
+            background-color:red;
+            text-align:center;
+            font-size:50px;
+           border-radius:10px; 
+          }
+        .ract:hover{opacity:0.7;
+           }
+body{
             background-color:lime;
-}
+              }
 #container{
             background-color:white;
-            height:60%;
-            width:65%;
+            height:50%;
+            max-width:480px;
            margin:400px 300px 300px 160px;
            border:4px solid ;
            border-radius:30px;
-          box-shadow:5px 5px 5px black; 
-            
-}
-td{
-           background-color:crimson ;
-           text-align:center;
-           font-size:50px;
-           color:blue;
-           border-radius:10px;
-           opacity:1;
-}
-td:hover{
-          opacity:0.7;
-          box-shadow:3px 3px 2px  2px white;
-  
-}
-
-
+          box-shadow:5px 5px 5px black; }
 #header{
          background-color:white;
          height:40%;
          width:100%;
          text-align:center;
+}
+#quad{
+            width:95%;
+             height:55%;
+             margin:10px;
+             padding :5px;
+             box-shadow:inset 2px 2px 3px  darkred,
+             inset -2px -2px 3px darkred; 
+
+             border-radius:16px;}
+#tab{
+border-radius:16px;
 }
 form input[type="button"]{
     font-weight:bold;
@@ -277,25 +62,8 @@ form input[type="reset"]{
 }
 form input[type="reset"]:hover{
   background-color:#d45700;
-}
+}            
 
-
-
-#quad{
-            width:95%;
-             height:55%;
-             margin:10px;
-             padding :5px;
-             box-shadow:inset 2px 2px 3px  darkred,
-             inset -2px -2px 3px darkred; 
-
-             border-radius:16px;
-            
-}
-#tab2{
-            box-radius:10px;
-}
-     
     </style>
 </head>
 <body>
@@ -307,48 +75,245 @@ form input[type="reset"]:hover{
           <form name="d">
               <h3>Timer<h3>
              <input type="text" size="4" name="d2"> <br><br>
-             <input type="button" value="start" onclick="startstoptimer()"><br><br>
-              <input type="reset" onclick="again(),resettimer()"  value="play again"><br>
+      
+Select Level<br><br>
+             <input type="button" value="easy" onclick="level1()">
+              <input type="button" value="medium" onclick="level2()">
+               <input type="button" value="hard" onclick="level3()"><br><br>
+              <input type="reset" onclick="resettimer(),load()"  value="play again"><br>
           </form> 
-          <h3> best 5scores<h3>
-          <p  id="top"  onclick="showbestscore();">show</p>
-
+          <h3> Top 5 scores<h3>
+   <p id ="1"   onclick="a();"> show</p>
+ </div> 
+<div id="quad">
+<table id="tab">
+    <tr>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
+       
+    </tr>
+    <tr>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
      
-      </div> 
-     <div id="quad">
-          <table  height=100% width=100%  Id="tab2">
-          <tr>
-                <td Id="1" onclick="a(),startstoptimer()">1</td>
-                <td Id="16"onclick="p();">16</td>
-                <td Id="10"onclick="j();">10</td>
-                <td Id="5"onclick="e();">5</td>
-         </tr>
-          <tr>
-                <td Id="17" onclick="q()">17</td>
-                <td Id="4" onclick="x()">4</td>
-                <td Id="11"onclick="k();">11</td>
-                <td Id="15"onclick="o();">15</td>
-         </tr>
-          <tr>
-                <td Id="8"onclick="h();">8</td>
-                <td Id="14"onclick="n();">14</td>
-                <td Id="18"onclick="r();">18</td>
-                <td Id="3"onclick="c();">3</td>
-         </tr>
-          <tr>
-                <td Id="19"onclick="s();">19</td>
-                <td Id="6"onclick="f();"> 6</td>
-                <td Id="9"onclick=" y();"> 9</td>
-                <td Id="13"onclick="m();">13</td>
-         </tr>
-         <tr>    
-                <td Id="7"onclick="g();">7</td>
-                <td Id="2" onclick="b();">2</td>
-               <td Id="12"onclick="l();">12</td>
-                <td Id="20"onclick="t(),startstoptimer(), score()" >20</td>
-         </tr>
-        </table>
-     </div>
-  </div>
+    </tr>
+    <tr>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
+
+    </tr>
+    <tr>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        
+    </tr>
+    <tr>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
+        <td><div class="ract" onclick="change(this);"></div></td>
+     
+    </tr>
+</table>
+</div>
+<script>
+    let num=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+   
+    var count=1;
+    shufflenumbers(num);
+    function shufflenumbers(num) {
+        for (var i = num.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = num[i];
+            num[i] = num[j];
+            num[j] = temp;
+        }
+    }
+    console.log(num);
+k=20;
+    function change(e){
+    if (e.innerHTML==count){
+        if (e.innerHTML==1){
+resettimer(); startstoptimer();}
+        else  if (e.innerHTML==k) {e.innerHTML=""; 
+            a();resettimer();score();}
+         if(count>(k-20)) { 
+             e.innerHTML="";  }
+         else {
+            e.innerHTML=count+20;  }
+        count++
+    }}
+
+    console.log(document.getElementsByClassName("ract"));
+    var box=document.getElementsByClassName("ract");
+ 
+    for (var i=0; i < 40; i++) {
+
+        document.getElementsByClassName("ract")[i].innerHTML = num[i];
+
+       
+    }
+var millisec= 0; 
+var seconds= 0;
+ var timer; 
+var show;
+var h;
+
+function display(){ 
+         if ( millisec>999 ){ 
+              millisec=0 ;
+              seconds+=1;
+              } 
+         else 
+             millisec+=1 
+             document.d.d2.value = seconds + "." + millisec; 
+             show= (seconds + "." + millisec) ; 
+
+       document.getElementById("dis"). innerHTML= seconds + "." + millisec; 
+             timer = setTimeout("display()",100); 
+ } 
+
+ 
+
+function stoptimer() { 
+         clearTimeout(timer); 
+              timer=0;
+ } 
+
+function startstoptimer() {  
+          if(timer>0) {      
+           } 
+           else { 
+               display();
+           } 
+} 
+
+function resettimer() { 	
+            stoptimer();
+           
+             millisec=0;	
+             seconds=0; 
+} 
+function score(){
+    alert("yourscore is "+show) ;
+}
+
+function a() {
+if (k==20) {
+var bestscored=[500,600,700,800,900];
+
+ 
+    if( millisec < bestscored[0]) {
+           bestscored[4]= bestscored[3];
+           bestscored[3]= bestscored[2]; 
+           bestscored[2]= bestscored[1]; 
+           bestscored[1]= bestscored[0];
+           bestscored[0]= millisec;  
+           }else  if( millisec < bestscored[1]) {
+           bestscored[4]= bestscored[3];
+           bestscored[3]= bestscored[2]; 
+           bestscored[2]= bestscored[1]; 
+           bestscored[1]= millisec;
+           }else  if( millisec < bestscored[2]) {
+           bestscored[4]= bestscored[3];
+           bestscored[3]= bestscored[2]; 
+           bestscored[2]=  millisec;        
+           }else  if( millisec < bestscored[3]) {
+           bestscored[4]= bestscored[3];
+           bestscored[3]=  millisec;
+           }else  if( millisec < bestscored[4]) {
+           bestscored[4]= millisec;}
+          else{
+                  }
+localStorage.setItem("bestscored", JSON.stringify(bestscored));
+var stored = JSON.parse(localStorage.getItem("bestscored"));
+
+document.getElementById("1" ).innerHTML = stored;
+ }
+else if (k==40) {
+var bestscore=[1000,1100,1200,1300,1400];
+       if( millisec < bestscore[0]) {
+           bestscore[4]= bestscore[3];
+           bestscore[3]= bestscore[2]; 
+           bestscore[2]= bestscore[1]; 
+           bestscore[1]= bestscore[0];
+           bestscore[0]= millisec;  
+           }else  if( millisec < bestscore[1]) {
+           bestscore[4]= bestscore[3];
+           bestscore[3]= bestscore[2]; 
+           bestscore[2]= bestscore[1]; 
+           bestscore[1]= millisec;
+           }else  if( millisec <bestscore[2]) {
+           bestscore[4]= bestscore[3];
+           bestscore[3]= bestscore[2]; 
+           bestscore[2]=  millisec;        
+           }else  if( millisec < bestscore[3]) {
+           bestscore[4]= bestscore[3];
+           bestscore[3]=  millisec;
+           }else  if( millisec < bestscore[4]) {
+           bestscore[4]= millisec;}
+          else{
+                  }
+localStorage.setItem("bestscore", JSON.stringify(bestscored));
+var stored = JSON.parse(localStorage.getItem("bestscore"));
+document.getElementById("1" ).innerHTML = bestscore;
+ }
+else if (k==60) {
+var bestscor=[1500,1600,1700,1800,1900];
+       if( millisec < bestscor[0]) {
+           bestscor[4]= bestscor[3];
+           bestscor[3]= bestscor[2]; 
+           bestscor[2]= bestscor[1]; 
+           bestscor[1]= bestscor[0];
+           bestscor[0]= millisec;  
+           }else  if( millisec < bestscor[1]) {
+           bestscor[4]= bestscor[3];
+           bestscor[3]= bestscor[2]; 
+           bestscor[2]= bestscor[1]; 
+           bestscor[1]= millisec;
+           }else  if( millisec <bestscor[2]) {
+           bestscor[4]= bestscor[3];
+           bestscor[3]= bestscor[2]; 
+           bestscor[2]=  millisec;        
+           }else  if( millisec < bestscor[3]) {
+           bestscor[4]= bestscor[3];
+           bestscor[3]=  millisec;
+           }else  if( millisec < bestscor[4]) {
+           bestscor[4]= millisec;}
+          else{
+                  }
+localStorage.setItem("bestscor", JSON.stringify(bestscored));
+var stored = JSON.parse(localStorage.getItem("bestscor"));
+document.getElementById("1" ).innerHTML = bestscor;
+ }
+
+
+}
+
+
+function load() {
+location. reload();
+}
+
+var k=20;
+function level1() {
+ k=20;
+}
+function level2() {
+ k=40;
+}
+function level3() {
+ k=60;
+}
+localStorage.setItem("high-sc", JSON.stringify(bestscored));
+</script>
 </body>
-</html>
+</html> 
